@@ -50,37 +50,12 @@
 }
 
 #download-buttons {
-    .download-link {
-        background: #6fbe4a;
-        box-shadow: none;
-        text-shadow: none;
-        .transition(background .1s ease-in-out);
-
-        .download-subtitle {
-            text-shadow: none;
-        }
-
-        &:hover,
-        &:focus {
-            background: darken(#6fbe4a, 3%);
-        }
-    }
-
     .download-dumb {
         text-align: center;
 
         .download-heading {
             color: #fff;
         }
-    }
-
-    /**
-     * I'm not proud of this but it avoids needing JS. These small
-     * links will be relocated from download buttons to the page
-     * footer longer term, once a new design is finalized.
-     */
-    .download-button .download-other {
-        display: none !important;
     }
 
     .download-button .unsupported-download a {
