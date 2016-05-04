@@ -157,34 +157,9 @@ main {
             margin-left: 45px;
         }
 
-        &:before {
-            display: inline-block;
-            border: 2px solid @foregroundColor;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            .font-size(24px);
-            font-weight: bold;
-            line-height: 2;
-            text-align: center;
-
-            @media only screen and (max-width: @breakTablet) {
-                width: 30px;
-                height: 30px;
-                .font-size(18px);
-                line-height: 1.6;
-            }
-        }
-
         h3 {
             display: inline-block;
             line-height: 1.5;
-        }
-
-        &.completed {
-            h3 {
-                padding-left: 70px;
-            }
         }
     }
 
@@ -224,6 +199,7 @@ main {
     .one.completed:before,
     .two.completed:before {
         position: absolute;
+        left: -65px;
         background: transparent url('/media/img/contribute/signup/complete-icon.svg') -30px -33px no-repeat;
         background-size: 90px 90px;
         content: '';
@@ -231,6 +207,21 @@ main {
         border-radius: 0;
         width: 90px;
         height: 90px;
+
+        @media only screen and (max-width: @breakTablet) {
+            background-size: 70px 70px;
+            background-position: -10px -23px;
+            width: 70px;
+            height: 70px;
+        }
+
+        @media only screen and (max-width: @breakMobileLandscape) {
+            background-size: 50px 50px;
+            background-position: -17px -13px;
+            left: -35px;
+            width: 50px;
+            height: 50px;
+        }
     }
 
     .feature-img {
